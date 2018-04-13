@@ -5,15 +5,19 @@
   function DataStore() {
     this.data = {};
   }
+  // добаляем список ключ значение
   DataStore.prototype.add = function (key, val) {
     this.data[key] = val;
   }
+  // получаем список по ключу
   DataStore.prototype.get = function (key) {
     return this.data[key];
   }
+  // получаем список всех заказов
   DataStore.prototype.getAll = function () {
     return this.data;
   }
+  // удаляет из списка по ключу
   DataStore.prototype.remove = function (key) {
     delete this.data[key];
   }
